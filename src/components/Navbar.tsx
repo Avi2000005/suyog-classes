@@ -176,7 +176,7 @@ export default function Navbar() {
       </nav>
       </header>
       {/* Spacer to prevent content overlap */}
-      <div className="h-24 md:h-20"></div>
+      <div className="h-24 md:h-20 bg-brand-navy"></div>
     </>
   );
 }
