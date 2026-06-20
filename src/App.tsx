@@ -5,6 +5,7 @@
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import CourseTicker from './components/CourseTicker';
 import About from './components/About';
 import Courses from './components/Courses';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -22,6 +23,9 @@ export default function App() {
       <main>
         {/* Hero Banner Section */}
         <Hero />
+
+        {/* Continuous Course Ticker strip */}
+        <CourseTicker />
 
         {/* About Founders Section */}
         <About />

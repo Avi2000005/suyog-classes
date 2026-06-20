@@ -45,7 +45,7 @@ export default function About() {
                 <span className="block font-sans font-bold text-lg uppercase tracking-wide">
                   Prof. Maske Patil Sir
                 </span>
-                <span className="block text-xs font-medium text-amber-300">
+                <span className="block text-xs font-medium text-brand-gold">
                   Founder & Principal Educator
                 </span>
               </div>
@@ -59,13 +59,13 @@ export default function About() {
           <div className="lg:col-span-7 flex flex-col justify-center">
             
             {/* Styled Quote Block */}
-            <div className="relative bg-slate-50 border-l-4 border-brand-red p-6 sm:p-8 rounded-r-3xl shadow-sm mb-8">
+            <div className="relative bg-rose-50/50 border-l-4 border-brand-red p-6 sm:p-8 rounded-r-3xl shadow-sm mb-8">
               {/* Giant elegant quotes icon */}
-              <div className="absolute top-4 right-6 text-brand-orange/15 pointer-events-none">
+              <div className="absolute top-4 right-6 text-brand-orange/10 pointer-events-none">
                 <Quote className="w-16 h-16 transform rotate-180" />
               </div>
 
-              <blockquote className="relative z-10 font-sans text-slate-700 text-base sm:text-lg italic font-medium leading-relaxed">
+              <blockquote className="relative z-10 font-sans text-slate-800 text-base sm:text-lg italic font-medium leading-relaxed">
                 "At Suyog Classes, we believe in imparting the best value to each student. Our aim is to impart quality education to every student at an affordable cost, so that it is not a financial burden for the parents. We are working tirelessly towards it."
               </blockquote>
 
@@ -74,7 +74,7 @@ export default function About() {
                   <h4 className="font-display font-black text-slate-900 text-base tracking-tight">
                     — Prof. Maske Patil
                   </h4>
-                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider font-sans mt-0.5">
+                  <p className="text-xs text-brand-red font-bold uppercase tracking-wider font-sans mt-0.5">
                     Founder, Suyog Classes
                   </p>
                 </div>

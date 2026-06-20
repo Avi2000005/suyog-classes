@@ -42,7 +42,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 shadow-sm border-b border-slate-200/60 bg-header-gray">
+      <header className="fixed top-0 left-0 right-0 z-50 shadow-sm border-b border-slate-800/80 bg-header-gray">
         <nav
           id="navbar"
           className={`transition-all duration-300 ${
@@ -65,7 +65,7 @@ export default function Navbar() {
                   src="/images/logo.webp"
                   alt="Suyog Classes Logo"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain rounded-xl shadow-sm border border-orange-100 group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain rounded-xl shadow-sm border border-slate-850 group-hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
                     // Fallback to beautiful text logo background in case the image fails to load
                     (e.target as HTMLElement).style.display = 'none';
@@ -82,13 +82,13 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand-red font-sans leading-none">
+                <span className="text-xs font-semibold uppercase tracking-wider text-brand-gold font-sans leading-none">
                   Prof. Maske Patil Sir's
                 </span>
-                <span className="text-xl sm:text-2xl font-extrabold tracking-tight bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold bg-clip-text text-transparent font-display">
+                <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-brand-gold font-display">
                   SUYOG CLASSES
                 </span>
-                <span className="text-[10px] sm:text-xs font-medium text-slate-500 tracking-tight leading-none mt-0.5">
+                <span className="text-[10px] sm:text-xs font-medium text-slate-300 tracking-tight leading-none mt-0.5">
                   Academy of Medical & IIT Foundation
                 </span>
               </div>
@@ -102,7 +102,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleScrollTo(e, link.href)}
-                    className="text-sm font-semibold text-slate-700 hover:text-brand-red transition-colors duration-250 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-red after:transition-all after:duration-300 hover:after:w-full"
+                    className="text-sm font-semibold text-slate-200 hover:text-brand-gold transition-colors duration-250 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {link.label}
                   </a>
@@ -114,7 +114,7 @@ export default function Navbar() {
                 href="#contact"
                 onClick={(e) => handleScrollTo(e, '#contact')}
                 id="desktop-enquire-btn"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-102 active:scale-98 transition-all duration-300 select-none cursor-pointer"
+                className="inline-flex items-center gap-2 bg-brand-red text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-102 active:scale-98 transition-all duration-300 select-none cursor-pointer"
               >
                 <PhoneCall className="w-4 h-4" />
                 <span>Enquire Now</span>
@@ -126,7 +126,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 id="mobile-menu-btn"
-                className="inline-flex items-center justify-center p-2 rounded-lg text-slate-700 hover:text-brand-red hover:bg-rose-50 transition-colors duration-200 focus:outline-none"
+                className="inline-flex items-center justify-center p-2 rounded-lg text-brand-gold hover:text-brand-gold hover:bg-[#1a100d] transition-colors duration-200 focus:outline-none"
                 aria-expanded={isOpen}
               >
                 <span className="sr-only">Open main menu</span>
@@ -145,7 +145,7 @@ export default function Navbar() {
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.25 }}
               id="mobile-menu"
-              className="lg:hidden border-t border-rose-50 bg-header-gray overflow-hidden shadow-inner"
+              className="lg:hidden border-t border-slate-800 bg-header-gray overflow-hidden shadow-inner"
             >
               <div className="px-4 pt-2 pb-6 space-y-2">
                 {navLinks.map((link) => (
@@ -153,7 +153,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleScrollTo(e, link.href)}
-                    className="block px-3 py-3 rounded-xl text-base font-medium text-slate-700 hover:text-brand-red hover:bg-rose-50 transition-colors duration-200"
+                    className="block px-3 py-3 rounded-xl text-base font-medium text-slate-200 hover:text-brand-gold hover:bg-[#1a100d] transition-colors duration-200"
                   >
                     {link.label}
                   </a>
@@ -163,7 +163,7 @@ export default function Navbar() {
                     href="#contact"
                     onClick={(e) => handleScrollTo(e, '#contact')}
                     id="mobile-enquire-btn"
-                    className="flex items-center justify-center gap-2 w-full text-center bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold text-white font-bold py-3.5 px-4 rounded-xl shadow-md"
+                    className="flex items-center justify-center gap-2 w-full text-center bg-brand-red text-white font-bold py-3.5 px-4 rounded-xl shadow-md"
                   >
                     <PhoneCall className="w-5 h-5" />
                     <span>Enquire Now</span>

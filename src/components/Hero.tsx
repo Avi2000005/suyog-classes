@@ -19,11 +19,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-[#F8F9FA] py-12 lg:py-20"
+      className="relative overflow-hidden bg-brand-navy bg-[radial-gradient(circle_at_25%_35%,rgba(185,28,28,0.25)_0%,rgba(217,119,6,0.15)_40%,transparent_80%),radial-gradient(circle_at_75%_55%,rgba(217,119,6,0.18)_0%,rgba(185,28,28,0.15)_35%,transparent_75%)] py-12 lg:py-20 text-white animate-fade-in"
     >
       {/* Decorative colored blurred light bubbles */}
-      <div className="absolute top-1/4 right-0 -z-10 w-72 h-72 bg-gradient-to-tr from-brand-orange/15 to-brand-gold/15 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 -z-10 w-96 h-96 bg-gradient-to-tr from-brand-red/10 to-brand-orange/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-12 left-10 -z-10 w-[450px] h-[450px] bg-brand-red/20 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-10 left-1/4 -z-10 w-[350px] h-[350px] bg-brand-orange/15 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-1/4 right-10 -z-10 w-[450px] h-[450px] bg-brand-orange/20 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-12 right-0 -z-10 w-[350px] h-[350px] bg-brand-red/18 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Animated Admissions Open Banner inside the website space */}
@@ -31,13 +33,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-10 p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-250/80 shadow-[0_2px_8px_-3px_rgba(0,0,0,0.05)] flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
+          className="mb-10 p-3.5 sm:p-4 rounded-2xl bg-[#1a100d] border border-brand-gold/30 shadow-[0_4px_20px_-3px_rgba(0,0,0,0.3)] flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
         >
           <div className="flex flex-col sm:flex-row items-center gap-3">
-            <span className="inline-flex bg-gradient-to-r from-brand-red to-brand-orange text-white text-[10px] sm:text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full animate-pulse shadow-sm">
-              2026-27 Admissions Open
+            <span className="inline-flex bg-transparent border border-brand-gold text-brand-gold text-[10px] sm:text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full animate-pulse shadow-sm">
+              • 🎓 2026-27 Admissions Open
             </span>
-            <span className="font-sans font-extrabold text-xs sm:text-sm text-slate-800 tracking-wide">
+            <span className="font-sans font-extrabold text-xs sm:text-sm text-slate-200 tracking-wide">
               Enrollments invited for Science, MHT-CET & IIT-JEE/NEET Foundation Batches!
             </span>
           </div>
@@ -48,7 +50,7 @@ export default function Hero() {
                 contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }
             }}
-            className="text-xs font-black tracking-wider uppercase text-brand-red hover:text-brand-orange transition-colors flex items-center gap-1 shrink-0 group"
+            className="text-xs font-black tracking-wider uppercase text-brand-gold hover:text-brand-orange transition-colors flex items-center gap-1 shrink-0 group cursor-pointer"
           >
             Apply Online Now
             <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
@@ -66,11 +68,11 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center justify-center lg:justify-start gap-2 mb-6"
             >
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-red/10 text-brand-red font-bold text-xs uppercase tracking-widest font-sans">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-red/20 text-red-300 border border-brand-red/40 font-bold text-xs uppercase tracking-widest font-sans">
                 <Award className="w-3.5 h-3.5" />
                 No. 1 Foundation Center
               </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-brand-orange/15 text-brand-orange font-bold text-xs uppercase tracking-widest font-sans">
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-brand-orange/20 text-brand-gold border border-brand-orange/30 font-bold text-xs uppercase tracking-widest font-sans">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Trusted Academy
               </span>
@@ -82,15 +84,15 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
               id="hero-title"
-              className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]"
+              className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.1]"
             >
-              <span className="block text-slate-800 text-2xl sm:text-3xl font-bold tracking-tight font-sans mb-2">
+              <span className="block text-slate-300 text-2xl sm:text-3xl font-bold tracking-tight font-sans mb-2">
                 Prof. Maske Patil Sir's
               </span>
-              <span className="block bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold bg-clip-text text-transparent pb-3">
+              <span className="block text-brand-gold pb-3 font-display">
                 SUYOG CLASSES
               </span>
-              <span className="block text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-700 tracking-tight leading-normal mt-1">
+              <span className="block text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-200 tracking-tight leading-normal mt-1">
                 Academy of Medical & IIT Foundation
               </span>
             </motion.h1>
@@ -100,9 +102,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-6 text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans font-normal"
+              className="mt-6 text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans font-normal"
             >
-              Empowering students with exceptional, highly personal, and <strong className="font-semibold text-slate-800">affordable coaching</strong> for Classes 9th to 12th. Excelling across <strong className="font-semibold text-brand-navy">State Board, Semi-English, CBSE, and ICSE</strong> curricula with a strong focus on building core academic foundations.
+              Empowering students with exceptional, highly personal, and <strong className="font-bold text-white">affordable coaching</strong> for Classes 9th to 12th. Excelling across <strong className="font-bold text-brand-gold">State Board, Semi-English, CBSE, and ICSE</strong> curricula with a strong focus on building core academic foundations.
             </motion.p>
 
             {/* Bullet Highlights */}
@@ -110,7 +112,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0 text-left font-sans text-xs sm:text-sm font-semibold text-slate-700"
+              className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0 text-left font-sans text-xs sm:text-sm font-semibold text-slate-300"
             >
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-red"></span>
@@ -125,7 +127,7 @@ export default function Hero() {
                 <span>Experienced Faculty</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-brand-navy"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
                 <span>Regular Testing & Progress Reports</span>
               </div>
             </motion.div>
@@ -140,7 +142,7 @@ export default function Hero() {
               <button
                 onClick={scrollToCourses}
                 id="hero-cta-courses"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-102 active:scale-98 transition-all duration-300 cursor-pointer select-none"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold/10 font-bold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 cursor-pointer select-none"
               >
                 <BookOpen className="w-5 h-5" />
                 <span>View Courses</span>
@@ -152,7 +154,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 id="hero-cta-whatsapp"
-                className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg hover:scale-102 active:scale-98 transition-all duration-300 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto bg-brand-red hover:bg-[#9b1c1c] text-white font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer"
               >
                 <MessageSquareCode className="w-5 h-5" />
                 <span>Enquire on WhatsApp</span>
@@ -167,7 +169,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-md lg:max-w-none aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 group">
+            <div className="relative w-full max-w-md lg:max-w-none aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-slate-950 group">
               <img
                 src="/images/hero-class-photo.webp"
                 alt="Suyog Classes Celebrating Students"
@@ -180,19 +182,19 @@ export default function Hero() {
                 }}
               />
               {/* Image Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent pointer-events-none"></div>
 
               {/* Floating success stats badge right on top of the image */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-md shadow-lg border border-white/20">
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#1a100d]/90 backdrop-blur-md shadow-lg border border-brand-gold/25">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange font-bold text-lg">
                     🏆
                   </div>
                   <div>
-                    <span className="block text-slate-900 font-extrabold text-sm font-display tracking-tight">
+                    <span className="block text-white font-extrabold text-sm font-display tracking-tight">
                       Annual Batch Excellence
                     </span>
-                    <span className="block text-slate-500 text-xs font-semibold">
+                    <span className="block text-slate-300 text-xs font-semibold">
                       Consistently producing top scorers in CBSE & State Board!
                     </span>
                   </div>
@@ -201,7 +203,7 @@ export default function Hero() {
             </div>
 
             {/* Decorative background outline square */}
-            <div className="absolute -inset-2 border-2 border-brand-orange/30 -z-20 rounded-3xl translate-x-3 translate-y-3 pointer-events-none"></div>
+            <div className="absolute -inset-2 border-2 border-brand-gold/25 -z-20 rounded-3xl translate-x-3 translate-y-3 pointer-events-none"></div>
           </motion.div>
 
         </div>

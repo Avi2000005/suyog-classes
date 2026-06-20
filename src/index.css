@@ -6,11 +6,11 @@
   --font-display: "Outfit", var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
-  --color-brand-red: #C8102E;
-  --color-brand-orange: #F7931E;
-  --color-brand-gold: #FFC72C;
-  --color-brand-navy: #1F2937;
-  --color-header-gray: #F8F9FA;
+  --color-brand-red: #b91c1c;
+  --color-brand-orange: #d97706;
+  --color-brand-gold: #eab308;
+  --color-brand-navy: #130c0a;
+  --color-header-gray: #130c0a;
 }
 
 /* Animations & Custom Utility Rules */
@@ -32,5 +32,14 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
 }
 

@@ -95,21 +95,47 @@ export default function Courses() {
     }
   };
 
-  const getIconComponent = (iconName: string) => {
+  const getIconComponent = (iconName: string, iconColorClass: string = "text-brand-red") => {
     switch (iconName) {
       case 'BookOpen':
-        return <BookOpen className="w-6 h-6 text-brand-red" />;
+        return <BookOpen className={`w-6 h-6 ${iconColorClass}`} />;
       case 'Award':
-        return <Award className="w-6 h-6 text-brand-orange" />;
+        return <Award className={`w-6 h-6 ${iconColorClass}`} />;
       case 'FileText':
-        return <FileText className="w-6 h-6 text-brand-gold" />;
+        return <FileText className={`w-6 h-6 ${iconColorClass}`} />;
       case 'Atom':
-        return <Atom className="w-6 h-6 text-brand-red" />;
+        return <Atom className={`w-6 h-6 ${iconColorClass}`} />;
       case 'BrainCircuit':
-        return <BrainCircuit className="w-6 h-6 text-brand-orange" />;
+        return <BrainCircuit className={`w-6 h-6 ${iconColorClass}`} />;
       default:
-        return <Sparkles className="w-6 h-6 text-brand-gold" />;
+        return <Sparkles className={`w-6 h-6 ${iconColorClass}`} />;
     }
+  };
+
+  const getCardGradient = (courseId: string) => {
+    if (courseId.includes('icse')) {
+      return 'bg-gradient-to-r from-[#047857] to-[#065f46] text-white'; // Green
+    }
+    if (courseId.includes('cet')) {
+      return 'bg-gradient-to-r from-[#d97706] to-[#b45309] text-white'; // Amber/Gold
+    }
+    return 'bg-gradient-to-r from-[#9b1c1c] to-[#7f1d1d] text-white'; // Red
+  };
+
+  const getCheckmarkColor = (courseId: string) => {
+    if (courseId.includes('icse')) return 'text-[#047857]';
+    if (courseId.includes('cet')) return 'text-[#d97706]';
+    return 'text-[#b91c1c]';
+  };
+
+  const getButtonHoverStyle = (courseId: string) => {
+    if (courseId.includes('icse')) {
+      return 'hover:bg-[#047857] hover:text-white hover:border-[#047857]';
+    }
+    if (courseId.includes('cet')) {
+      return 'hover:bg-[#d97706] hover:text-white hover:border-[#d97706]';
+    }
+    return 'hover:bg-brand-red hover:text-white hover:border-brand-red';
   };
 
   const filteredGroups = activeTab === 'all' 
@@ -117,7 +143,7 @@ export default function Courses() {
     : courseGroups.filter(g => g.id === activeTab);
 
   return (
-    <section id="courses" className="py-16 sm:py-24 bg-rose-50/20 relative border-y border-rose-50/50 scroll-mt-6">
+    <section id="courses" className="py-16 sm:py-24 bg-rose-50/10 relative border-y border-rose-100/30 scroll-mt-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header section */}
@@ -136,12 +162,12 @@ export default function Courses() {
 
         {/* Tab/Group Segmented Controller Selector */}
         <div className="flex justify-center mb-12" id="courses-tabs-selector">
-          <div className="inline-flex bg-white p-1.5 rounded-2xl shadow-sm border border-rose-100/60 font-sans">
+          <div className="inline-flex bg-white p-1.5 rounded-2xl shadow-sm border border-slate-200 font-sans">
             <button
               onClick={() => setActiveTab('all')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 activeTab === 'all'
-                  ? 'bg-gradient-to-r from-brand-red to-brand-orange text-white shadow-sm'
+                  ? 'bg-brand-red text-white shadow-sm'
                   : 'text-slate-600 hover:text-brand-red hover:bg-slate-50'
               }`}
             >
@@ -151,7 +177,7 @@ export default function Courses() {
               onClick={() => setActiveTab('9-10')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 activeTab === '9-10'
-                  ? 'bg-gradient-to-r from-brand-red to-brand-orange text-white shadow-sm'
+                  ? 'bg-brand-red text-white shadow-sm'
                   : 'text-slate-600 hover:text-brand-red hover:bg-slate-50'
               }`}
             >
@@ -161,7 +187,7 @@ export default function Courses() {
               onClick={() => setActiveTab('11-12')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 activeTab === '11-12'
-                  ? 'bg-gradient-to-r from-brand-red to-brand-orange text-white shadow-sm'
+                  ? 'bg-brand-red text-white shadow-sm'
                   : 'text-slate-600 hover:text-brand-red hover:bg-slate-50'
               }`}
             >
@@ -183,7 +209,7 @@ export default function Courses() {
                 id={`course-group-${group.id}`}
               >
                 {/* Inner Header */}
-                <div className="mb-8 text-center sm:text-left border-b border-rose-100/50 pb-4">
+                <div className="mb-8 text-center sm:text-left border-b border-slate-200 pb-4">
                   <h3 className="font-display text-xl sm:text-2xl font-extrabold text-slate-800 flex items-center justify-center sm:justify-start gap-3">
                     <span className="w-2.5 h-6 bg-brand-red rounded-full block"></span>
                     {group.title}
@@ -198,43 +224,47 @@ export default function Courses() {
                   {group.courses.map((course) => (
                     <div
                       key={course.id}
-                      className="group bg-white rounded-3xl border border-rose-100/40 p-6 shadow-sm hover:shadow-md hover:border-brand-orange/20 transition-all duration-300 flex flex-col justify-between"
+                      className="group bg-white rounded-3xl border border-slate-250/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
                       id={`course-card-${course.id}`}
                     >
-                      <div>
+                      {/* Colored Top Header */}
+                      <div className={`p-6 ${getCardGradient(course.id)}`}>
                         {/* Header card icon and title */}
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center border border-slate-100 group-hover:bg-gradient-to-br group-hover:from-rose-50 group-hover:to-orange-50 transition-colors duration-300">
-                            {getIconComponent(course.icon)}
+                          <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 text-white shrink-0">
+                            {getIconComponent(course.icon, "text-white")}
                           </div>
-                          <h4 className="font-display font-bold text-lg text-slate-800 tracking-tight">
+                          <h4 className="font-display font-black text-lg text-white tracking-tight">
                             {course.name}
                           </h4>
                         </div>
 
                         {/* Description */}
-                        <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                        <p className="font-sans text-xs sm:text-sm text-slate-100/90 leading-relaxed min-h-[40px]">
                           {course.description}
                         </p>
+                      </div>
 
+                      {/* White Bottom Body */}
+                      <div className="p-6 bg-white flex-grow flex flex-col justify-between">
                         {/* List of features */}
-                        <ul className="space-y-2.5 border-t border-slate-50 pt-4" id={`features-list-${course.id}`}>
+                        <ul className="space-y-2.5" id={`features-list-${course.id}`}>
                           {course.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start gap-2.5 font-sans text-xs text-slate-600">
-                              <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                            <li key={idx} className="flex items-start gap-2.5 font-sans text-xs text-slate-650">
+                              <CheckCircle className={`w-4 h-4 ${getCheckmarkColor(course.id)} mt-0.5 flex-shrink-0`} />
                               <span>{feature}</span>
                             </li>
                           ))}
                         </ul>
-                      </div>
 
-                      {/* Footer button inside card */}
-                      <button
-                        onClick={handleScrollToContact}
-                        className="mt-8 inline-flex items-center justify-center gap-2 bg-slate-50 group-hover:bg-gradient-to-r group-hover:from-brand-red group-hover:to-brand-orange text-slate-700 group-hover:text-white font-bold text-xs py-3 w-full rounded-xl transition-all duration-300"
-                      >
-                        Enquire For Admission
-                      </button>
+                        {/* Footer button inside card */}
+                        <button
+                          onClick={handleScrollToContact}
+                          className={`mt-8 inline-flex items-center justify-center gap-2 bg-slate-50 border border-slate-200 text-slate-700 font-bold text-xs py-3 w-full rounded-xl transition-all duration-350 cursor-pointer ${getButtonHoverStyle(course.id)}`}
+                        >
+                          Enquire For Admission
+                        </button>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -244,21 +274,21 @@ export default function Courses() {
         </div>
 
         {/* CTA banner under courses */}
-        <div className="mt-16 bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold text-white rounded-3xl p-6 sm:p-10 shadow-lg text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl -z-1 translate-x-1/2 -translate-y-1/2"></div>
-          <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#FFED4A] font-sans">
+        <div className="mt-16 bg-[#130c0a] border border-brand-gold/20 text-white rounded-3xl p-6 sm:p-10 shadow-lg text-center relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-2xl -z-1 translate-x-1/2 -translate-y-1/2"></div>
+          <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-gold font-sans">
             Limited Admissions Available
           </p>
           <p className="mt-2 text-2xl sm:text-3xl font-black font-display tracking-tight leading-tight">
             Give Your Child the Foundation They Deserve
           </p>
-          <p className="mt-4 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed text-white/95 font-sans">
+          <p className="mt-4 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed text-slate-350 font-sans">
             We maintain extremely small student batches to promise personal conceptual review, rigorous test performance oversight, and regular mentoring by Patil Sir.
           </p>
           <div className="mt-6 flex justify-center">
             <button
               onClick={handleScrollToContact}
-              className="px-6 py-3 bg-white text-brand-red font-extrabold text-sm rounded-full shadow-sm hover:shadow-md hover:scale-103 active:scale-97 transition-all cursor-pointer"
+              className="px-6 py-3 bg-brand-red text-white hover:bg-brand-red/90 font-extrabold text-sm rounded-full shadow-sm hover:shadow-md hover:scale-103 active:scale-97 transition-all cursor-pointer"
             >
               Check Batch Schedules
             </button>
