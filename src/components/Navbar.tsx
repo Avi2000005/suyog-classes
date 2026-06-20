@@ -47,7 +47,7 @@ export default function Navbar() {
           id="navbar"
           className={`transition-all duration-300 ${
             isScrolled
-              ? 'bg-header-gray/95 backdrop-blur-md py-2'
+              ? 'bg-header-gray/95 md:backdrop-blur-md py-2'
               : 'bg-header-gray py-3.5'
           }`}
         >

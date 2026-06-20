@@ -241,7 +241,7 @@ Looking forward to your guidance! Thank you.`;
           </div>
 
           {/* Right Column (Desktop) - Address, Phone and Interactive Map */}
-          <div className="lg:col-span-5 space-y-8" id="contact-info-panel">
+          <div className="lg:col-span-5 space-y-8 will-change-transform transform-gpu" id="contact-info-panel">
             <div className="space-y-6">
               <h3 className="font-display text-2xl font-black text-slate-800 tracking-tight">
                 Our Center Details
@@ -337,7 +337,7 @@ Looking forward to your guidance! Thank you.`;
                 allowFullScreen={true}
                 loading="eager"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full rounded-none sm:rounded-2xl"
+                className="w-full h-full rounded-none sm:rounded-2xl pointer-events-none lg:pointer-events-auto"
               ></iframe>
             </div>
 
