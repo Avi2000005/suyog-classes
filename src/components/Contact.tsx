@@ -327,8 +327,8 @@ Looking forward to your guidance! Thank you.`;
             {/* Embedded Google map container */}
             <div className="w-full relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 aspect-[16/10] bg-slate-100">
               <iframe
-                title="Suyog Classes Garkheda Parisar Aurangabad Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15011.050478036577!2d75.34005087508007!3d19.86015792942488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb986bfa33e1c9%3A0x6bba84ab9fb6abf7!2sGarkheda%2c%20Chhatrapati%20Sambhajinagar%20(Aurangabad)%2c%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+                title="Suyog Classes Garkheda Chhatrapati Sambhajinagar Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.4820297371587!2d75.352494!3d19.861783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba288b10e27c1%3A0x1d5165c70b4c6440!2s4KS44KWB4KSv4KWL4KSXIENPQUNISU5HIENMQVNTRVM!5e0!3m2!1sen!2sin!4v1700000000000"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -341,7 +341,7 @@ Looking forward to your guidance! Thank you.`;
 
             {/* Dir button */}
             <a
-              href="https://www.google.com/maps/dir/?api=1&destination=Garkheda+Parisar+Aurangabad"
+              href="https://maps.app.goo.gl/wk8Happ3ek59rDeW8"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-3.5 rounded-xl shadow-md transition-all duration-200 font-sans text-sm tracking-wide"
