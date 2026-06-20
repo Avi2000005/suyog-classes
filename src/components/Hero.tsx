@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-brand-navy bg-[radial-gradient(circle_at_25%_35%,rgba(185,28,28,0.25)_0%,rgba(217,119,6,0.15)_40%,transparent_80%),radial-gradient(circle_at_75%_55%,rgba(217,119,6,0.18)_0%,rgba(185,28,28,0.15)_35%,transparent_75%)] py-12 lg:py-20 text-white animate-fade-in"
+      className="relative overflow-hidden bg-brand-navy bg-[radial-gradient(circle_at_25%_35%,rgba(185,28,28,0.25)_0%,rgba(217,119,6,0.15)_40%,transparent_80%),radial-gradient(circle_at_75%_55%,rgba(217,119,6,0.18)_0%,rgba(185,28,28,0.15)_35%,transparent_75%)] pt-36 pb-12 lg:pt-40 lg:pb-20 text-white animate-fade-in"
     >
       {/* Decorative colored blurred light bubbles */}
       <div className="absolute top-12 left-10 -z-10 w-[450px] h-[450px] bg-brand-red/20 rounded-full blur-[120px] pointer-events-none"></div>

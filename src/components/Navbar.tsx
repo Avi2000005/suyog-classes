@@ -175,8 +175,6 @@ export default function Navbar() {
         </AnimatePresence>
       </nav>
       </header>
-      {/* Spacer to prevent content overlap */}
-      <div className="h-24 md:h-20 bg-brand-navy"></div>
     </>
   );
 }
