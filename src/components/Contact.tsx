@@ -327,7 +327,7 @@ Looking forward to your guidance! Thank you.`;
             </div>
 
             {/* Embedded Google map container */}
-            <div className="w-full h-64 sm:h-80 relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-slate-100">
+            <div className="w-full h-64 sm:h-80 relative rounded-none sm:rounded-2xl shadow-sm border border-slate-200 bg-slate-100">
               <iframe
                 title="Suyog Classes Garkheda Chhatrapati Sambhajinagar Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.4820297371587!2d75.352494!3d19.861783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba288b10e27c1%3A0x1d5165c70b4c6440!2s4KS44KWB4KSv4KWL4KSXIENPQUNISU5HIENMQVNTRVM!5e0!3m2!1sen!2sin!4v1700000000000"
@@ -335,9 +335,9 @@ Looking forward to your guidance! Thank you.`;
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen={true}
-                loading="lazy"
+                loading="eager"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full"
+                className="w-full h-full rounded-none sm:rounded-2xl"
               ></iframe>
             </div>
 
