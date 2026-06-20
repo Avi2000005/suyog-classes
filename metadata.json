@@ -1,0 +1,6 @@
+{
+  "name": "Suyog Classes",
+  "description": "Premium coaching website for Prof. Maske Patil Sir's SUYOG CLASSES (Academy of Medical & IIT Foundation) in Aurangabad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
