@@ -6,14 +6,14 @@
 import React from 'react';
 import { ArrowRight, BookOpen, MessageSquareCode, Award, ShieldCheck } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
-  const scrollToCourses = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+  const navigate = useNavigate();
+
+  const goToCourses = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     e.preventDefault();
-    const coursesSection = document.querySelector('#courses');
-    if (coursesSection) {
-      coursesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    navigate('/courses');
   };
 
   return (
@@ -44,12 +44,7 @@ export default function Hero() {
             </span>
           </div>
           <button
-            onClick={() => {
-              const contactSection = document.querySelector('#contact');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            }}
+            onClick={() => navigate('/contact')}
             className="text-xs font-black tracking-wider uppercase text-brand-gold hover:text-brand-orange transition-colors flex items-center gap-1 shrink-0 group cursor-pointer"
           >
             Apply Online Now
@@ -140,7 +135,7 @@ export default function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
               <button
-                onClick={scrollToCourses}
+                onClick={goToCourses}
                 id="hero-cta-courses"
                 className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold/10 font-bold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 cursor-pointer select-none"
               >
@@ -162,45 +157,45 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Photo Column */}
+          {/* Photo Column / Chatbot */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-md lg:max-w-none aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-slate-950 group">
-              <img
-                src="/images/hero-class-photo.webp"
-                alt="Suyog Classes Celebrating Students"
-                referrerPolicy="no-referrer"
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                onError={(e) => {
-                  // Fallback beautiful image if path issues arise
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=600';
-                }}
-              />
-              {/* Image Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent pointer-events-none"></div>
+              <div className="relative w-full max-w-md lg:max-w-none aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-slate-950 group">
+                <img
+                  src="/images/hero-class-photo.webp"
+                  alt="Suyog Classes Celebrating Students"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  onError={(e) => {
+                    // Fallback beautiful image if path issues arise
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=600';
+                  }}
+                />
+                {/* Image Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent pointer-events-none"></div>
 
-              {/* Floating success stats badge right on top of the image */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#1a100d]/90 backdrop-blur-md shadow-lg border border-brand-gold/25">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange font-bold text-lg">
-                    🏆
-                  </div>
-                  <div>
-                    <span className="block text-white font-extrabold text-sm font-display tracking-tight">
-                      Annual Batch Excellence
-                    </span>
-                    <span className="block text-slate-300 text-xs font-semibold">
-                      Consistently producing top scorers in CBSE & State Board!
-                    </span>
+                {/* Floating success stats badge right on top of the image */}
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#1a100d]/90 backdrop-blur-md shadow-lg border border-brand-gold/25">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange font-bold text-lg">
+                      🏆
+                    </div>
+                    <div>
+                      <span className="block text-white font-extrabold text-sm font-display tracking-tight">
+                        Annual Batch Excellence
+                      </span>
+                      <span className="block text-slate-300 text-xs font-semibold">
+                        Consistently producing top scorers in CBSE & State Board!
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
             {/* Decorative background outline square */}
             <div className="absolute -inset-2 border-2 border-brand-gold/25 -z-20 rounded-3xl translate-x-3 translate-y-3 pointer-events-none"></div>

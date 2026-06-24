@@ -87,7 +87,7 @@ export default function About() {
                 Our Vision & Mission
               </h3>
               <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed">
-                Suyog Classes was founded with a singular, resolute mission: to democratize high-caliber tuition and competitive coaching in Aurangabad. We cater comprehensively to student development across <strong className="font-semibold text-slate-800">Classes 4th to 12th Standard</strong>, catering to both fundamental school board results and advanced engineering and medical prerequisites.
+                Suyog Classes was founded with a singular, resolute mission: to democratize high-caliber tuition and competitive coaching in Chhatrapati Sambhajinagar. We cater comprehensively to student development across <strong className="font-semibold text-slate-800">Classes 4th to 12th Standard</strong>, catering to both fundamental school board results and advanced engineering and medical prerequisites.
               </p>
               <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed">
                 By bridging state-of-the-art educational methodologies with individualistic monitoring models, we guarantee that students can transition smoothly from school frameworks to complex competitive domains without feeling overwhelmed. Our record of success over progressive years stems directly from dedicated classroom sessions, standard testing routines, and an affordable, non-commercial approach to coaching. 

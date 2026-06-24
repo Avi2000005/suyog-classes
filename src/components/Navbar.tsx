@@ -6,10 +6,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, PhoneCall } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,21 +26,14 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About Us', href: '#about' },
-    { label: 'Courses', href: '#courses' },
-    { label: 'Why Choose Us', href: '#why-choose-us' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Courses', href: '/courses' },
+    { label: 'Why Choose Us', href: '/why-choose-us' },
+    { label: 'Contact', href: '/contact' },
   ];
 
-  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setIsOpen(false);
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <>
@@ -54,9 +49,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo and Branding Link */}
-            <a
-              href="#home"
-              onClick={(e) => handleScrollTo(e, '#home')}
+            <Link
+              to="/"
+              onClick={() => setIsOpen(false)}
               className="flex items-center gap-3.5 group"
               id="navbar-logo-link"
             >
@@ -92,33 +87,35 @@ export default function Navbar() {
                   Academy of Medical & IIT Foundation
                 </span>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
               <div className="flex items-center gap-6">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
-                    href={link.href}
-                    onClick={(e) => handleScrollTo(e, link.href)}
-                    className="text-sm font-semibold text-slate-200 hover:text-brand-gold transition-colors duration-250 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full"
+                    to={link.href}
+                    className={`text-sm font-semibold transition-colors duration-250 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-brand-gold after:transition-all after:duration-300 ${
+                      isActive(link.href)
+                        ? 'text-brand-gold after:w-full'
+                        : 'text-slate-200 hover:text-brand-gold hover:after:w-full after:w-0'
+                    }`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
 
               {/* Enquire Now Button */}
-              <a
-                href="#contact"
-                onClick={(e) => handleScrollTo(e, '#contact')}
+              <Link
+                to="/contact"
                 id="desktop-enquire-btn"
                 className="inline-flex items-center gap-2 bg-brand-red text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-102 active:scale-98 transition-all duration-300 select-none cursor-pointer"
               >
                 <PhoneCall className="w-4 h-4" />
                 <span>Enquire Now</span>
-              </a>
+              </Link>
             </div>
 
             {/* Mobile/Tablet Menu Button */}
@@ -149,25 +146,29 @@ export default function Navbar() {
             >
               <div className="px-4 pt-2 pb-6 space-y-2">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
-                    href={link.href}
-                    onClick={(e) => handleScrollTo(e, link.href)}
-                    className="block px-3 py-3 rounded-xl text-base font-medium text-slate-200 hover:text-brand-gold hover:bg-[#1a100d] transition-colors duration-200"
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200 ${
+                      isActive(link.href)
+                        ? 'text-brand-gold bg-[#1a100d]'
+                        : 'text-slate-200 hover:text-brand-gold hover:bg-[#1a100d]'
+                    }`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
                 <div className="pt-4 px-3">
-                  <a
-                    href="#contact"
-                    onClick={(e) => handleScrollTo(e, '#contact')}
+                  <Link
+                    to="/contact"
+                    onClick={() => setIsOpen(false)}
                     id="mobile-enquire-btn"
                     className="flex items-center justify-center gap-2 w-full text-center bg-brand-red text-white font-bold py-3.5 px-4 rounded-xl shadow-md"
                   >
                     <PhoneCall className="w-5 h-5" />
                     <span>Enquire Now</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>

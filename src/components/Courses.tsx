@@ -6,9 +6,11 @@
 import { useState } from 'react';
 import { BookOpen, Award, FileText, Atom, BrainCircuit, Sparkles, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { CourseGroup } from '../types';
 
 export default function Courses() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<'all' | '9-10' | '11-12'>('all');
 
   const courseGroups: CourseGroup[] = [
@@ -89,10 +91,7 @@ export default function Courses() {
   ];
 
   const handleScrollToContact = () => {
-    const contactSection = document.querySelector('#contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    navigate('/contact');
   };
 
   const getIconComponent = (iconName: string, iconColorClass: string = "text-brand-red") => {

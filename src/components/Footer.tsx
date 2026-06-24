@@ -5,17 +5,10 @@
 
 import React from 'react';
 import { MapPin, Phone, MessageCircle, Calendar, Youtube, Instagram, Facebook } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   return (
     <footer className="bg-slate-900 text-slate-300 font-sans relative border-t-4 border-brand-red select-none" id="site-footer">
@@ -26,9 +19,8 @@ export default function Footer() {
           
           {/* Logo and About Description */}
           <div className="md:col-span-5 space-y-6">
-            <a
-              href="#home"
-              onClick={(e) => handleScrollTo(e, '#home')}
+            <Link
+              to="/"
               className="flex items-center gap-3.5 group"
             >
               <div className="relative w-12 h-12 flex-shrink-0">
@@ -61,10 +53,10 @@ export default function Footer() {
                   Academy of Medical & IIT Foundation
                 </span>
               </div>
-            </a>
+            </Link>
             
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-              Prof. Maske Patil Sir’s SUYOG CLASSES is Aurangabad’s premier institution, molding young minds for state board excellence and competitive medicine / IIT engineering foundations.
+              Prof. Maske Patil Sir’s SUYOG CLASSES is Chhatrapati Sambhajinagar’s premier institution, molding young minds for state board excellence and competitive medicine / IIT engineering foundations.
             </p>
 
             <div className="space-y-3">
@@ -119,20 +111,19 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 font-medium text-xs sm:text-sm text-slate-400" id="footer-quick-links">
               {[
-                { label: 'Home', href: '#home' },
-                { label: 'About Us', href: '#about' },
-                { label: 'Courses Offered', href: '#courses' },
-                { label: 'Why Choose Us', href: '#why-choose-us' },
-                { label: 'Contact Us', href: '#contact' }
+                { label: 'Home', href: '/' },
+                { label: 'About Us', href: '/about' },
+                { label: 'Courses Offered', href: '/courses' },
+                { label: 'Why Choose Us', href: '/why-choose-us' },
+                { label: 'Contact Us', href: '/contact' }
               ].map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => handleScrollTo(e, link.href)}
+                  <Link
+                    to={link.href}
                     className="hover:text-[#FFC72C] transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -148,7 +139,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-orange mt-0.5 flex-shrink-0" />
                 <span className="leading-relaxed">
-                  Near Shri Swami Samarth Kendracha, Pundlik Nagar Main Road, Garkheda Parisar, Aurangabad
+                 Beside Shri Swami Samarth Kendra Kaman, Pundlik Nagar Main Road, Garkheda Parisar, Chhatrapati Sambhajinagar
                 </span>
               </li>
               <li className="flex items-center gap-3 border-t border-slate-800/80 pt-3">
@@ -179,7 +170,7 @@ export default function Footer() {
           <div className="flex items-center justify-center gap-3 font-semibold text-[10px] uppercase tracking-wider">
             <span>Affordable Coaching Excellence</span>
             <span>•</span>
-            <span>Aurangabad, Maharashtra</span>
+            <span>Chhatrapati Sambhajinagar, Maharashtra</span>
           </div>
         </div>
 

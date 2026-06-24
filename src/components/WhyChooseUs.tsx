@@ -124,7 +124,7 @@ export default function WhyChooseUs() {
               <div className="mt-4 flex items-center gap-3">
                 <div className="w-1.5 h-6 bg-gradient-to-b from-brand-orange to-brand-gold rounded-full"></div>
                 <span className="font-display font-extrabold text-xs sm:text-sm uppercase tracking-wide text-brand-orange">
-                  Suyog Classes Editorial Focus — Aurangabad
+                  Suyog Classes Editorial Focus — Chhatrapati Sambhajinagar
                 </span>
               </div>
             </div>

@@ -7,7 +7,7 @@ import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppFloatButton() {
   return (
-    <div className="fixed bottom-6 right-6 z-45" id="whatsapp-float-container">
+    <div className="fixed bottom-6 left-6 z-45" id="whatsapp-float-container">
       <a
         href="https://wa.me/918626092350"
         target="_blank"
@@ -21,7 +21,7 @@ export default function WhatsAppFloatButton() {
         </svg>
 
         {/* Hover label */}
-        <span className="absolute right-16 bg-slate-900/95 font-sans text-xs font-bold text-white px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-md border border-slate-700/50">
+        <span className="absolute left-16 bg-slate-900/95 font-sans text-xs font-bold text-white px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-md border border-slate-700/50">
           Enquire on WhatsApp
         </span>
       </a>

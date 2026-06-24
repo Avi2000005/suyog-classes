@@ -257,7 +257,7 @@ Looking forward to your guidance! Thank you.`;
                     Address Location
                   </span>
                   <p className="mt-1 font-sans text-slate-700 text-sm leading-relaxed font-medium">
-                    Near Shri Swami Samarth Kendracha, Pundlik Nagar Main Road, Garkheda Parisar, Aurangabad
+                    Beside Shri Swami Samarth Kendra Kaman, Pundlik Nagar Main Road, Garkheda Parisar, Chhatrapati Sambhajinagar
                   </p>
                 </div>
               </div>
