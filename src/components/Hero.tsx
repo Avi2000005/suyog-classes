@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { ArrowRight, BookOpen, MessageSquareCode, Award, ShieldCheck } from 'lucide-react';
-import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
@@ -29,11 +28,8 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Animated Admissions Open Banner inside the website space */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-10 p-3.5 sm:p-4 rounded-2xl bg-[#1a100d] border border-brand-gold/30 shadow-[0_4px_20px_-3px_rgba(0,0,0,0.3)] flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
+        <div
+          className="mb-10 p-3.5 sm:p-4 rounded-2xl bg-[#1a100d] border border-brand-gold/30 shadow-[0_4px_20px_-3px_rgba(0,0,0,0.3)] flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left opacity-0 animate-fade-in-down animation-delay-100"
         >
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <span className="inline-flex bg-transparent border border-brand-gold text-brand-gold text-[10px] sm:text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full animate-pulse shadow-sm">
@@ -50,18 +46,15 @@ export default function Hero() {
             Apply Online Now
             <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
           </button>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Text Content Column */}
           <div className="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
             {/* Tag/Badge indicator */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center justify-center lg:justify-start gap-2 mb-6"
+            <div
+              className="inline-flex items-center justify-center lg:justify-start gap-2 mb-6 opacity-0 animate-fade-in-up"
             >
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-red/20 text-red-300 border border-brand-red/40 font-bold text-xs uppercase tracking-widest font-sans">
                 <Award className="w-3.5 h-3.5" />
@@ -71,15 +64,12 @@ export default function Hero() {
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Trusted Academy
               </span>
-            </motion.div>
+            </div>
 
             {/* Main Headline H1 (Single H1 on the page for SEO) */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
+            <h1
               id="hero-title"
-              className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.1]"
+              className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.1] opacity-0 animate-fade-in-up animation-delay-150"
             >
               <span className="block text-slate-300 text-2xl sm:text-3xl font-bold tracking-tight font-sans mb-2">
                 Prof. Maske Patil Sir's
@@ -90,24 +80,18 @@ export default function Hero() {
               <span className="block text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-200 tracking-tight leading-normal mt-1">
                 Academy of Medical & IIT Foundation
               </span>
-            </motion.h1>
+            </h1>
 
             {/* Intro paragraph */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-6 text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans font-normal"
+            <p
+              className="mt-6 text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans font-normal opacity-0 animate-fade-in-up animation-delay-300"
             >
               Empowering students with exceptional, highly personal, and <strong className="font-bold text-white">affordable coaching</strong> for Classes 9th to 12th. Excelling across <strong className="font-bold text-brand-gold">State Board, Semi-English, CBSE, and ICSE</strong> curricula with a strong focus on building core academic foundations.
-            </motion.p>
+            </p>
 
             {/* Bullet Highlights */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0 text-left font-sans text-xs sm:text-sm font-semibold text-slate-300"
+            <div
+              className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0 text-left font-sans text-xs sm:text-sm font-semibold text-slate-300 opacity-0 animate-fade-in-up animation-delay-400"
             >
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-red"></span>
@@ -125,14 +109,11 @@ export default function Hero() {
                 <span className="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
                 <span>Regular Testing & Progress Reports</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.45 }}
-              className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+            <div
+              className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 opacity-0 animate-fade-in-up animation-delay-450"
             >
               <button
                 onClick={goToCourses}
@@ -154,52 +135,49 @@ export default function Hero() {
                 <MessageSquareCode className="w-5 h-5" />
                 <span>Enquire on WhatsApp</span>
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Photo Column / Chatbot */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5 relative flex justify-center lg:justify-end"
+          <div
+            className="lg:col-span-5 relative flex justify-center lg:justify-end opacity-0 animate-fade-in-scale animation-delay-200"
           >
-              <div className="relative w-full max-w-md lg:max-w-none aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-slate-950 group">
-                <img
-                  src="/images/hero-class-photo.webp"
-                  alt="Suyog Classes Celebrating Students"
-                  referrerPolicy="no-referrer"
-                  fetchPriority="high"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  onError={(e) => {
-                    // Fallback beautiful image if path issues arise
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=600';
-                  }}
-                />
-                {/* Image Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent pointer-events-none"></div>
+            <div className="relative w-full max-w-md lg:max-w-none aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-slate-950 group">
+              <img
+                src="/images/hero-class-photo.webp"
+                alt="Suyog Classes Celebrating Students"
+                referrerPolicy="no-referrer"
+                fetchPriority="high"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                onError={(e) => {
+                  // Fallback beautiful image if path issues arise
+                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=600';
+                }}
+              />
+              {/* Image Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent pointer-events-none"></div>
 
-                {/* Floating success stats badge right on top of the image */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#1a100d]/90 backdrop-blur-md shadow-lg border border-brand-gold/25">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange font-bold text-lg">
-                      🏆
-                    </div>
-                    <div>
-                      <span className="block text-white font-extrabold text-sm font-display tracking-tight">
-                        Annual Batch Excellence
-                      </span>
-                      <span className="block text-slate-300 text-xs font-semibold">
-                        Consistently producing top scorers in CBSE & State Board!
-                      </span>
-                    </div>
+              {/* Floating success stats badge right on top of the image */}
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#1a100d]/90 backdrop-blur-md shadow-lg border border-brand-gold/25">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange font-bold text-lg">
+                    🏆
+                  </div>
+                  <div>
+                    <span className="block text-white font-extrabold text-sm font-display tracking-tight">
+                      Annual Batch Excellence
+                    </span>
+                    <span className="block text-slate-300 text-xs font-semibold">
+                      Consistently producing top scorers in CBSE & State Board!
+                    </span>
                   </div>
                 </div>
               </div>
+            </div>
 
             {/* Decorative background outline square */}
             <div className="absolute -inset-2 border-2 border-brand-gold/25 -z-20 rounded-3xl translate-x-3 translate-y-3 pointer-events-none"></div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

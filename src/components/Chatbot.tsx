@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare, Send, X, Bot, User, HelpCircle, Phone, MapPin, DollarSign, BookOpen } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 
 interface Message {
@@ -342,36 +341,27 @@ export default function Chatbot() {
   return (
     <div className="fixed bottom-6 right-6 z-45 flex flex-col items-end gap-3 pointer-events-none select-none">
       {/* Expanded Drawer panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 30 }}
-            transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-            className="pointer-events-auto shadow-2xl"
-          >
-            {chatWindow}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`pointer-events-auto shadow-2xl transition-all duration-300 origin-bottom-right transform ${
+          isOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-8 pointer-events-none'
+        }`}
+      >
+        {chatWindow}
+      </div>
 
       {/* Collapsed floating badge toggle button */}
-      <motion.button
-        initial={{ scale: 0, rotate: -20 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: 'spring', delay: 0.8, stiffness: 260, damping: 20 }}
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`pointer-events-auto w-14 h-14 rounded-2xl shadow-lg flex items-center justify-center cursor-pointer select-none text-white transition-all duration-300 ${
+        className={`pointer-events-auto w-14 h-14 rounded-2xl shadow-lg flex items-center justify-center cursor-pointer select-none text-white transition-all duration-300 transform scale-100 hover:scale-105 ${
           isOpen 
             ? 'bg-[#130c0a] hover:bg-slate-900 border border-slate-800 hover:rotate-90' 
-            : 'bg-brand-red hover:bg-brand-red/90 hover:scale-105 hover:shadow-xl'
+            : 'bg-brand-red hover:bg-brand-red/90 hover:shadow-xl'
         }`}
         aria-expanded={isOpen}
         aria-label="Open chat assistant"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6 animate-pulse" />}
-      </motion.button>
+      </button>
     </div>
   );
 }

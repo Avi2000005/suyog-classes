@@ -5,7 +5,6 @@
 
 import { useState } from 'react';
 import { BookOpen, Award, FileText, Atom, BrainCircuit, Sparkles, CheckCircle } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { CourseGroup } from '../types';
 
@@ -197,14 +196,10 @@ export default function Courses() {
 
         {/* Group Render List */}
         <div className="space-y-16">
-          <AnimatePresence mode="popLayout">
+          <div>
             {filteredGroups.map((group) => (
-              <motion.div
+              <div
                 key={group.id}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.3 }}
                 id={`course-group-${group.id}`}
               >
                 {/* Inner Header */}
@@ -267,9 +262,9 @@ export default function Courses() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
+          </div>
         </div>
 
         {/* CTA banner under courses */}

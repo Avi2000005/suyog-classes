@@ -4,7 +4,6 @@
  */
 
 import { Quote } from 'lucide-react';
-import { motion } from 'motion/react';
 
 export default function About() {
   return (

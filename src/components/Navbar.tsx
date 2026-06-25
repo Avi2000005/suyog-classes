@@ -5,7 +5,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, PhoneCall } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
@@ -134,46 +133,40 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu container */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              id="mobile-menu"
-              className="lg:hidden border-t border-slate-800 bg-header-gray overflow-hidden shadow-inner"
-            >
-              <div className="px-4 pt-2 pb-6 space-y-2">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200 ${
-                      isActive(link.href)
-                        ? 'text-brand-gold bg-[#1a100d]'
-                        : 'text-slate-200 hover:text-brand-gold hover:bg-[#1a100d]'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <div className="pt-4 px-3">
-                  <Link
-                    to="/contact"
-                    onClick={() => setIsOpen(false)}
-                    id="mobile-enquire-btn"
-                    className="flex items-center justify-center gap-2 w-full text-center bg-brand-red text-white font-bold py-3.5 px-4 rounded-xl shadow-md"
-                  >
-                    <PhoneCall className="w-5 h-5" />
-                    <span>Enquire Now</span>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div
+          id="mobile-menu"
+          className={`lg:hidden border-t border-slate-800 bg-header-gray overflow-hidden shadow-inner transition-all duration-300 ease-in-out ${
+            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+          }`}
+        >
+          <div className="px-4 pt-2 pb-6 space-y-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`block px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200 ${
+                  isActive(link.href)
+                    ? 'text-brand-gold bg-[#1a100d]'
+                    : 'text-slate-200 hover:text-brand-gold hover:bg-[#1a100d]'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="pt-4 px-3">
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                id="mobile-enquire-btn"
+                className="flex items-center justify-center gap-2 w-full text-center bg-brand-red text-white font-bold py-3.5 px-4 rounded-xl shadow-md"
+              >
+                <PhoneCall className="w-5 h-5" />
+                <span>Enquire Now</span>
+              </Link>
+            </div>
+          </div>
+        </div>
       </nav>
       </header>
     </>
