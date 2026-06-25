@@ -299,7 +299,7 @@ export default function Chatbot() {
             <button
               key={index}
               onClick={() => handleSend(qq.query)}
-              className="text-[10px] sm:text-xs font-bold text-slate-600 hover:text-brand-red bg-white border border-slate-200 rounded-full px-3 py-1.5 hover:border-brand-red hover:shadow-sm transition-all duration-200 cursor-pointer"
+              className="text-xs font-bold text-slate-600 hover:text-brand-red bg-white border border-slate-200 rounded-full px-3.5 py-2.5 min-h-[40px] hover:border-brand-red hover:shadow-sm transition-all duration-200 cursor-pointer flex items-center justify-center"
             >
               {qq.label}
             </button>

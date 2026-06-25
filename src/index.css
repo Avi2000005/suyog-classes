@@ -3,7 +3,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Outfit", var(--font-sans);
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
   
   --color-brand-red: #b91c1c;
   --color-brand-orange: #d97706;
@@ -15,18 +15,33 @@
 /* Animations & Custom Utility Rules */
 @keyframes radial-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+    transform: scale(1);
+    opacity: 0.6;
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
+    transform: scale(1.45);
+    opacity: 0;
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    transform: scale(1.45);
+    opacity: 0;
   }
 }
 
 .animate-pulse-green {
-  animation: radial-pulse 2s infinite;
+  position: relative;
+}
+
+.animate-pulse-green::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: inherit;
+  z-index: -1;
+  opacity: 0.6;
+  animation: radial-pulse 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  pointer-events: none;
 }
 
 html {

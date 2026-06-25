@@ -271,17 +271,17 @@ Looking forward to your guidance! Thank you.`;
                   <span className="block font-sans font-bold text-xs uppercase text-slate-500 tracking-wide">
                     Call For Admissions
                   </span>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 mt-1">
                     <a
                       href="tel:+918626092350"
-                      className="font-display font-black text-slate-800 text-base md:text-lg hover:text-brand-red transition-colors"
+                      className="font-display font-black text-slate-800 text-base md:text-lg hover:text-brand-red transition-colors py-1.5 block sm:inline-block"
                     >
                       8626092350
                     </a>
                     <span className="hidden sm:inline text-slate-300">|</span>
                     <a
                       href="tel:+919637470097"
-                      className="font-display font-black text-slate-800 text-base md:text-lg hover:text-brand-red transition-colors"
+                      className="font-display font-black text-slate-800 text-base md:text-lg hover:text-brand-red transition-colors py-1.5 block sm:inline-block"
                     >
                       9637470097
                     </a>
@@ -299,7 +299,7 @@ Looking forward to your guidance! Thank you.`;
                     href="https://youtube.com/@suyogclasses?si=Lg38VnV64L1Arbpn"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col sm:flex-row items-center justify-center gap-1.5 p-2.5 rounded-xl bg-red-50 hover:bg-red-100 border border-red-100/60 text-red-600 transition-all duration-300 group hover:shadow-sm"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-1.5 p-3 min-h-[44px] rounded-xl bg-red-50 hover:bg-red-100 border border-red-100/60 text-red-600 transition-all duration-300 group hover:shadow-sm"
                   >
                     <Youtube className="w-4 h-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="font-sans font-extrabold text-[11px] sm:text-xs text-slate-700">YouTube</span>
@@ -308,7 +308,7 @@ Looking forward to your guidance! Thank you.`;
                     href="https://www.instagram.com/suyog_classes?igsh=dXI1a2VyZjNvN3ht"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col sm:flex-row items-center justify-center gap-1.5 p-2.5 rounded-xl bg-pink-50 hover:bg-pink-100 border border-pink-100/60 text-pink-600 transition-all duration-300 group hover:shadow-sm"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-1.5 p-3 min-h-[44px] rounded-xl bg-pink-50 hover:bg-pink-100 border border-pink-100/60 text-pink-600 transition-all duration-300 group hover:shadow-sm"
                   >
                     <Instagram className="w-4 h-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="font-sans font-extrabold text-[11px] sm:text-xs text-slate-700">Instagram</span>
@@ -317,7 +317,7 @@ Looking forward to your guidance! Thank you.`;
                     href="https://www.facebook.com/share/1CsSsSfyFW"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col sm:flex-row items-center justify-center gap-1.5 p-2.5 rounded-xl bg-blue-50 hover:bg-blue-101 border border-blue-110/50 text-[#1877F2] transition-all duration-300 group hover:shadow-sm"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-1.5 p-3 min-h-[44px] rounded-xl bg-blue-50 hover:bg-blue-101 border border-blue-110/50 text-[#1877F2] transition-all duration-300 group hover:shadow-sm"
                   >
                     <Facebook className="w-4 h-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="font-sans font-extrabold text-[11px] sm:text-xs text-slate-700">Facebook</span>
