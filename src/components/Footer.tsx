@@ -28,6 +28,7 @@ export default function Footer() {
                   src="/images/logo.webp"
                   alt="Suyog Classes Logo Footer"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                   className="w-full h-full object-contain rounded-xl border border-slate-800 bg-white"
                   onError={(e) => {
                     (e.target as HTMLElement).style.display = 'none';
@@ -68,7 +69,7 @@ export default function Footer() {
                   href="https://youtube.com/@suyogclasses?si=Lg38VnV64L1Arbpn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-red-600 hover:text-white flex items-center justify-center text-slate-305 shadow-sm transition-all duration-300 group hover:scale-110"
+                  className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-red-600 hover:text-white flex items-center justify-center text-slate-300 shadow-sm transition-all duration-300 group hover:scale-110"
                   aria-label="Visit our YouTube Channel"
                 >
                   <Youtube className="w-5 h-5" />
@@ -77,7 +78,7 @@ export default function Footer() {
                   href="https://www.instagram.com/suyog_classes?igsh=dXI1a2VyZjNvN3ht"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white flex items-center justify-center text-slate-305 shadow-sm transition-all duration-300 group hover:scale-110"
+                  className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white flex items-center justify-center text-slate-300 shadow-sm transition-all duration-300 group hover:scale-110"
                   aria-label="Follow us on Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -86,7 +87,7 @@ export default function Footer() {
                   href="https://www.facebook.com/share/1CsSsSfyFW"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-[#1877F2] hover:text-white flex items-center justify-center text-slate-350 shadow-sm transition-all duration-300 group hover:scale-110"
+                  className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-[#1877F2] hover:text-white flex items-center justify-center text-slate-300 shadow-sm transition-all duration-300 group hover:scale-110"
                   aria-label="Like our Facebook Page"
                 >
                   <Facebook className="w-5 h-5" />
@@ -95,7 +96,7 @@ export default function Footer() {
                   href="https://wa.me/918626092350"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center text-slate-305 shadow-sm transition-all duration-300 group hover:scale-110"
+                  className="w-12 h-12 rounded-xl bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center text-slate-300 shadow-sm transition-all duration-300 group hover:scale-110"
                   aria-label="Direct message on WhatsApp"
                 >
                   <MessageCircle className="w-5 h-5" />
@@ -109,7 +110,7 @@ export default function Footer() {
             <h4 className="font-display font-extrabold text-sm uppercase text-white tracking-widest">
               Quick Navigation
             </h4>
-            <ul className="space-y-3 font-medium text-xs sm:text-sm text-slate-400" id="footer-quick-links">
+            <ul className="space-y-0.5 font-medium text-xs sm:text-sm text-slate-400" id="footer-quick-links">
               {[
                 { label: 'Home', href: '/' },
                 { label: 'About Us', href: '/about' },
@@ -120,7 +121,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="hover:text-[#FFC72C] transition-colors"
+                    className="hover:text-[#FFC72C] transition-colors py-3 block"
                   >
                     {link.label}
                   </Link>
@@ -163,7 +164,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center text-xs text-slate-500 font-sans">
+        <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center text-xs text-slate-400 font-sans">
           <p>
             © {currentYear} Prof. Maske Patil Sir's Suyog Classes. All rights reserved.
           </p>

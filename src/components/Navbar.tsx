@@ -60,7 +60,7 @@ export default function Navbar() {
                   src="/images/logo.webp"
                   alt="Suyog Classes Logo"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain rounded-xl shadow-sm border border-slate-850 group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain rounded-xl shadow-sm border border-slate-800 group-hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
                     // Fallback to beautiful text logo background in case the image fails to load
                     (e.target as HTMLElement).style.display = 'none';
@@ -111,7 +111,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 id="desktop-enquire-btn"
-                className="inline-flex items-center gap-2 bg-brand-red text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-102 active:scale-98 transition-all duration-300 select-none cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 bg-brand-red text-white font-bold text-sm px-5 py-3 min-h-[44px] rounded-full shadow-md hover:shadow-lg hover:scale-102 active:scale-98 transition-all duration-300 select-none cursor-pointer"
               >
                 <PhoneCall className="w-4 h-4" />
                 <span>Enquire Now</span>
@@ -123,7 +123,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 id="mobile-menu-btn"
-                className="inline-flex items-center justify-center p-2 rounded-lg text-brand-gold hover:text-brand-gold hover:bg-[#1a100d] transition-colors duration-200 focus:outline-none"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-lg text-brand-gold hover:text-brand-gold hover:bg-[#1a100d] transition-colors duration-200 focus:outline-none"
                 aria-expanded={isOpen}
               >
                 <span className="sr-only">Open main menu</span>

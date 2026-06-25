@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
           <button
             onClick={() => navigate('/contact')}
-            className="text-xs font-black tracking-wider uppercase text-brand-gold hover:text-brand-orange transition-colors flex items-center gap-1 shrink-0 group cursor-pointer"
+            className="text-xs font-black tracking-wider uppercase text-brand-gold hover:text-brand-orange transition-colors flex items-center justify-center gap-1 shrink-0 group cursor-pointer min-h-[44px] py-2 px-3"
           >
             Apply Online Now
             <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
@@ -169,7 +169,7 @@ export default function Hero() {
                   src="/images/hero-class-photo.webp"
                   alt="Suyog Classes Celebrating Students"
                   referrerPolicy="no-referrer"
-                  loading="lazy"
+                  fetchPriority="high"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   onError={(e) => {
                     // Fallback beautiful image if path issues arise

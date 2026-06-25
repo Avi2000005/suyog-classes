@@ -162,9 +162,9 @@ export default function Courses() {
         {/* Tab/Group Segmented Controller Selector */}
         <div className="flex justify-center mb-12" id="courses-tabs-selector">
           <div className="inline-flex bg-white p-1.5 rounded-2xl shadow-sm border border-slate-200 font-sans">
-            <button
+             <button
               onClick={() => setActiveTab('all')}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+              className={`py-3 px-5 min-h-[44px] flex items-center justify-center rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 activeTab === 'all'
                   ? 'bg-brand-red text-white shadow-sm'
                   : 'text-slate-600 hover:text-brand-red hover:bg-slate-50'
@@ -174,7 +174,7 @@ export default function Courses() {
             </button>
             <button
               onClick={() => setActiveTab('9-10')}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+              className={`py-3 px-5 min-h-[44px] flex items-center justify-center rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 activeTab === '9-10'
                   ? 'bg-brand-red text-white shadow-sm'
                   : 'text-slate-600 hover:text-brand-red hover:bg-slate-50'
@@ -184,7 +184,7 @@ export default function Courses() {
             </button>
             <button
               onClick={() => setActiveTab('11-12')}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+              className={`py-3 px-5 min-h-[44px] flex items-center justify-center rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 activeTab === '11-12'
                   ? 'bg-brand-red text-white shadow-sm'
                   : 'text-slate-600 hover:text-brand-red hover:bg-slate-50'
@@ -223,7 +223,7 @@ export default function Courses() {
                   {group.courses.map((course) => (
                     <div
                       key={course.id}
-                      className="group bg-white rounded-3xl border border-slate-250/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                      className="group bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
                       id={`course-card-${course.id}`}
                     >
                       {/* Colored Top Header */}
@@ -249,7 +249,7 @@ export default function Courses() {
                         {/* List of features */}
                         <ul className="space-y-2.5" id={`features-list-${course.id}`}>
                           {course.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start gap-2.5 font-sans text-xs text-slate-650">
+                            <li key={idx} className="flex items-start gap-2.5 font-sans text-xs text-slate-600">
                               <CheckCircle className={`w-4 h-4 ${getCheckmarkColor(course.id)} mt-0.5 flex-shrink-0`} />
                               <span>{feature}</span>
                             </li>
@@ -259,7 +259,7 @@ export default function Courses() {
                         {/* Footer button inside card */}
                         <button
                           onClick={handleScrollToContact}
-                          className={`mt-8 inline-flex items-center justify-center gap-2 bg-slate-50 border border-slate-200 text-slate-700 font-bold text-xs py-3 w-full rounded-xl transition-all duration-350 cursor-pointer ${getButtonHoverStyle(course.id)}`}
+                          className={`mt-8 inline-flex items-center justify-center gap-2 bg-slate-50 border border-slate-200 text-slate-700 font-bold text-xs py-3 min-h-[44px] w-full rounded-xl transition-all duration-350 cursor-pointer ${getButtonHoverStyle(course.id)}`}
                         >
                           Enquire For Admission
                         </button>
@@ -281,13 +281,13 @@ export default function Courses() {
           <p className="mt-2 text-2xl sm:text-3xl font-black font-display tracking-tight leading-tight">
             Give Your Child the Foundation They Deserve
           </p>
-          <p className="mt-4 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed text-slate-350 font-sans">
+          <p className="mt-4 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed text-slate-300 font-sans">
             We maintain extremely small student batches to promise personal conceptual review, rigorous test performance oversight, and regular mentoring by Patil Sir.
           </p>
           <div className="mt-6 flex justify-center">
             <button
               onClick={handleScrollToContact}
-              className="px-6 py-3 bg-brand-red text-white hover:bg-brand-red/90 font-extrabold text-sm rounded-full shadow-sm hover:shadow-md hover:scale-103 active:scale-97 transition-all cursor-pointer"
+              className="px-6 py-3 min-h-[44px] bg-brand-red text-white hover:bg-brand-red/90 font-extrabold text-sm rounded-full shadow-sm hover:shadow-md hover:scale-103 active:scale-97 transition-all cursor-pointer"
             >
               Check Batch Schedules
             </button>
