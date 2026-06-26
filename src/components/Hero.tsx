@@ -1,11 +1,96 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React from 'react';
 import { ArrowRight, BookOpen, MessageSquareCode, Award, ShieldCheck } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://suyogcoachingclasses.in/#website",
+      "url": "https://suyogcoachingclasses.in/",
+      "name": "Suyog Coaching Classes",
+      "description": "Premium educational coaching institute in Chhatrapati Sambhajinagar",
+      "publisher": {
+        "@id": "https://suyogcoachingclasses.in/#organization"
+      }
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://suyogcoachingclasses.in/#organization",
+      "name": "Prof. Maske Patil Sir's Suyog Classes",
+      "alternateName": "Suyog Classes Chhatrapati Sambhajinagar",
+      "description": "Premier educational coaching institute in Chhatrapati Sambhajinagar offering quality, affordable tuition for school boards (State Board, CBSE, ICSE) and advanced competitive engineering/medical foundations (IIT-JEE, NEET, MHT-CET).",
+      "logo": "https://suyogcoachingclasses.in/images/logo.webp",
+      "url": "https://suyogcoachingclasses.in/",
+      "telephone": "+918626092350",
+      "sameAs": [
+        "https://youtube.com/@suyogclasses?si=Lg38VnV64L1Arbpn",
+        "https://www.instagram.com/suyog_classes?igsh=dXI1a2VyZjNvN3ht",
+        "https://www.facebook.com/share/1CsSsSfyFW"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beside Shri Swami Samarth Kendra Kaman, Pundlik Nagar Main Road, Garkheda Parisar",
+        "addressLocality": "Chhatrapati Sambhajinagar",
+        "addressRegion": "Maharashtra",
+        "postalCode": "431005",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "19.861783",
+        "longitude": "75.352494"
+      },
+      "hasMap": "https://maps.app.goo.gl/wk8Happ3ek59rDeW8",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+918626092350",
+        "contactType": "admissions",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi", "Marathi"]
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://suyogcoachingclasses.in/#localbusiness",
+      "name": "Suyog Coaching Classes",
+      "image": "https://suyogcoachingclasses.in/images/logo.webp",
+      "telephone": "+918626092350",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beside Shri Swami Samarth Kendra Kaman, Pundlik Nagar Main Road, Garkheda Parisar",
+        "addressLocality": "Chhatrapati Sambhajinagar",
+        "addressRegion": "Maharashtra",
+        "postalCode": "431005",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "19.861783",
+        "longitude": "75.352494"
+      },
+      "url": "https://suyogcoachingclasses.in/",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ]
+    }
+  ]
+};
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -20,6 +105,13 @@ export default function Hero() {
       id="home"
       className="relative overflow-hidden bg-brand-navy bg-[radial-gradient(circle_at_25%_35%,rgba(185,28,28,0.25)_0%,rgba(217,119,6,0.15)_40%,transparent_80%),radial-gradient(circle_at_75%_55%,rgba(217,119,6,0.18)_0%,rgba(185,28,28,0.15)_35%,transparent_75%)] pt-36 pb-12 lg:pt-40 lg:pb-20 text-white animate-fade-in"
     >
+      <SEO 
+        title="Suyog Coaching Classes Chhatrapati Sambhajinagar | 9th-12th Board & Entrance Foundation"
+        description="Prof. Maske Patil Sir's Suyog Classes in Pundlik Nagar, Chhatrapati Sambhajinagar provides premier private coaching for Classes 9th, 10th, 11th, and 12th Science boards (State Board, CBSE, ICSE) and MHT-CET/IIT/NEET foundations."
+        keywords="Suyog Coaching Classes, Suyog Classes Chhatrapati Sambhajinagar, best tuition classes near me, 10th SSC coaching, 11th 12th science board exam preparation, MHT-CET coaching, Pundlik Nagar, Garkheda Parisar"
+        canonical="https://suyogcoachingclasses.in/"
+        schema={homeSchema}
+      />
       {/* Decorative colored blurred light bubbles */}
       <div className="absolute top-12 left-10 -z-10 w-[450px] h-[450px] bg-brand-red/20 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-10 left-1/4 -z-10 w-[350px] h-[350px] bg-brand-orange/15 rounded-full blur-[100px] pointer-events-none"></div>
@@ -86,7 +178,7 @@ export default function Hero() {
             <p
               className="mt-6 text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans font-normal opacity-0 animate-fade-in-up animation-delay-300"
             >
-              Empowering students with exceptional, highly personal, and <strong className="font-bold text-white">affordable coaching</strong> for Classes 9th to 12th. Excelling across <strong className="font-bold text-brand-gold">State Board, Semi-English, CBSE, and ICSE</strong> curricula with a strong focus on building core academic foundations.
+              Empowering high school students with exceptional, highly personal, and <strong className="font-bold text-white">affordable coaching</strong> for Classes 9th to 12th in Pundlik Nagar and Garkheda Parisar. Excelling across <strong className="font-bold text-brand-gold">State Board (SSC/HSC), CBSE, and ICSE</strong> curricula, we build a solid academic base for Board Exams, MHT-CET, and NEET/IIT-JEE foundation batches.
             </p>
 
             {/* Bullet Highlights */}
@@ -145,7 +237,7 @@ export default function Hero() {
             <div className="relative w-full max-w-md lg:max-w-none aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-slate-950 group">
               <img
                 src="/images/hero-class-photo.webp"
-                alt="Suyog Classes Celebrating Students"
+                alt="High school board toppers and students celebrating academic success at Suyog Classes, Chhatrapati Sambhajinagar"
                 referrerPolicy="no-referrer"
                 fetchPriority="high"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"

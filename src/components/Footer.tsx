@@ -22,6 +22,7 @@ export default function Footer() {
             <Link
               to="/"
               className="flex items-center gap-3.5 group"
+              aria-label="Suyog Coaching Classes - Back to Home"
             >
               <div className="relative w-12 h-12 flex-shrink-0">
                 <img

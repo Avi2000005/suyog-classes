@@ -1,12 +1,42 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { useState } from 'react';
 import { BookOpen, Award, FileText, Atom, BrainCircuit, Sparkles, CheckCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { CourseGroup } from '../types';
+import SEO from './SEO';
+
+const coursesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://suyogcoachingclasses.in/courses#webpage",
+      "url": "https://suyogcoachingclasses.in/courses",
+      "name": "9th-12th Board & Entrance Coaching Programs | Suyog Classes",
+      "description": "Explore our specialized coaching programs for 9th, 10th (SSC, CBSE, ICSE) and 11th, 12th Science boards and competitive MHT-CET/IIT-JEE/NEET foundation classes.",
+      "isPartOf": {
+        "@id": "https://suyogcoachingclasses.in/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suyogcoachingclasses.in/courses#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://suyogcoachingclasses.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses Offered",
+          "item": "https://suyogcoachingclasses.in/courses"
+        }
+      ]
+    }
+  ]
+};
 
 export default function Courses() {
   const navigate = useNavigate();
@@ -142,6 +172,13 @@ export default function Courses() {
 
   return (
     <section id="courses" className="py-16 sm:py-24 bg-rose-50/10 relative border-y border-rose-100/30 scroll-mt-6">
+      <SEO
+        title="9th-12th Board & Entrance Coaching Programs | Suyog Classes"
+        description="Enrolling now for Science boards, MHT-CET, and school board (State Board SSC, CBSE, ICSE) coaching at Suyog Classes, Chhatrapati Sambhajinagar. Taught by Prof. Maske Patil Sir."
+        keywords="SSC board coaching, CBSE 10th standard tuition, ICSE physics chemistry math, 11th 12th science courses, MHT-CET preparation, Chhatrapati Sambhajinagar classes"
+        canonical="https://suyogcoachingclasses.in/courses"
+        schema={coursesSchema}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header section */}

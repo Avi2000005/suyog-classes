@@ -1,13 +1,50 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { Quote } from 'lucide-react';
+import SEO from './SEO';
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://suyogcoachingclasses.in/about#webpage",
+      "url": "https://suyogcoachingclasses.in/about",
+      "name": "About Prof. Maske Patil Sir & Suyog Classes",
+      "description": "Learn about the legacy of trust, affordable fees, and result-oriented coaching at Suyog Classes, led by Prof. Maske Patil Sir in Chhatrapati Sambhajinagar.",
+      "isPartOf": {
+        "@id": "https://suyogcoachingclasses.in/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suyogcoachingclasses.in/about#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://suyogcoachingclasses.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://suyogcoachingclasses.in/about"
+        }
+      ]
+    }
+  ]
+};
 
 export default function About() {
   return (
     <section id="about" className="py-16 sm:py-24 bg-white relative scroll-mt-6">
+      <SEO
+        title="About Prof. Maske Patil Sir & Suyog Classes Chhatrapati Sambhajinagar"
+        description="Learn about the legacy of trust and value-driven education at Suyog Classes, founded by Prof. Maske Patil Sir. We deliver high-quality, affordable coaching for school boards and entrance exams."
+        keywords="Prof. Maske Patil Sir, Suyog Classes founder, coaching history, academic excellence, affordable tuition, Chhatrapati Sambhajinagar"
+        canonical="https://suyogcoachingclasses.in/about"
+        schema={aboutSchema}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section title */}
@@ -29,7 +66,7 @@ export default function About() {
             <div className="relative w-full max-w-sm sm:max-w-md aspect-[3/4] rounded-3xl overflow-hidden shadow-xl border-4 border-slate-50 bg-slate-100 group">
               <img
                 src="/images/owner-photo.webp"
-                alt="Prof. Maske Patil, Founder of Suyog Classes"
+                alt="Prof. Maske Patil Sir, founder and experienced physics and math faculty at Suyog Coaching Classes, Chhatrapati Sambhajinagar"
                 referrerPolicy="no-referrer"
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 ease-out"
@@ -86,10 +123,10 @@ export default function About() {
                 Our Vision & Mission
               </h3>
               <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed">
-                Suyog Classes was founded with a singular, resolute mission: to democratize high-caliber tuition and competitive coaching in Chhatrapati Sambhajinagar. We cater comprehensively to student development across <strong className="font-semibold text-slate-800">Classes 4th to 12th Standard</strong>, catering to both fundamental school board results and advanced engineering and medical prerequisites.
+                Suyog Classes was founded with a singular, resolute mission: to democratize high-caliber private tuition and competitive coaching in Garkheda, Pundlik Nagar, CIDCO, and nearby Aurangabad/Chhatrapati Sambhajinagar areas. We cater comprehensively to student development across <strong className="font-semibold text-slate-800">Classes 9th to 12th Standard</strong>, providing excellent preparation for school board exams and advanced engineering/medical entrance prerequisites.
               </p>
               <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed">
-                By bridging state-of-the-art educational methodologies with individualistic monitoring models, we guarantee that students can transition smoothly from school frameworks to complex competitive domains without feeling overwhelmed. Our record of success over progressive years stems directly from dedicated classroom sessions, standard testing routines, and an affordable, non-commercial approach to coaching. 
+                By bridging state-of-the-art educational methodologies with individualistic monitoring models, we guarantee that students can transition smoothly from school frameworks to complex competitive domains without feeling overwhelmed. Our record of academic success over progressive years stems directly from dedicated classroom sessions, weekly chapter tests, mock boards, and a highly affordable, non-commercial approach to coaching. 
               </p>
             </div>
 

@@ -1,10 +1,77 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { useState } from 'react';
 import { MapPin, Phone, MessageSquare, Send, MapIcon, Youtube, Instagram, Facebook } from 'lucide-react';
+import SEO from './SEO';
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://suyogcoachingclasses.in/contact#webpage",
+      "url": "https://suyogcoachingclasses.in/contact",
+      "name": "Contact Suyog Coaching Classes | Chhatrapati Sambhajinagar",
+      "description": "Get in touch with Prof. Maske Patil Sir's Suyog Classes in Pundlik Nagar, Chhatrapati Sambhajinagar. Enquire about admissions, batch sizes, fees, and location.",
+      "isPartOf": {
+        "@id": "https://suyogcoachingclasses.in/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suyogcoachingclasses.in/contact#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://suyogcoachingclasses.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact Us",
+          "item": "https://suyogcoachingclasses.in/contact"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://suyogcoachingclasses.in/#localbusiness",
+      "name": "Suyog Coaching Classes",
+      "image": "https://suyogcoachingclasses.in/images/logo.webp",
+      "telephone": "+918626092350",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beside Shri Swami Samarth Kendra Kaman, Pundlik Nagar Main Road, Garkheda Parisar",
+        "addressLocality": "Chhatrapati Sambhajinagar",
+        "addressRegion": "Maharashtra",
+        "postalCode": "431005",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "19.861783",
+        "longitude": "75.352494"
+      },
+      "url": "https://suyogcoachingclasses.in/",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ]
+    }
+  ]
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -97,6 +164,13 @@ Looking forward to your guidance! Thank you.`;
 
   return (
     <section id="contact" className="py-16 sm:py-24 bg-slate-50 relative scroll-mt-6">
+      <SEO
+        title="Contact Suyog Coaching Classes | Pundlik Nagar, Chhatrapati Sambhajinagar"
+        description="Get in touch with Prof. Maske Patil Sir's Suyog Classes. Find phone numbers, address details for our Garkheda/Pundlik Nagar center, and submit admission queries."
+        keywords="contact Suyog Classes, tuition phone number, coaching address Pundlik Nagar, Garkheda Parisar classes, admissions 2026"
+        canonical="https://suyogcoachingclasses.in/contact"
+        schema={contactSchema}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title */}

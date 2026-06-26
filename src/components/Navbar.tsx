@@ -53,6 +53,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="flex items-center gap-3.5 group"
               id="navbar-logo-link"
+              aria-label="Suyog Coaching Classes - Back to Home"
             >
               <div className="relative w-12 h-12 flex-shrink-0">
                 <img

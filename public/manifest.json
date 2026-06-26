@@ -1,0 +1,18 @@
+{
+  "short_name": "Suyog Classes",
+  "name": "Prof. Maske Patil Sir's Suyog Classes",
+  "description": "Suyog Classes in Chhatrapati Sambhajinagar provides premier coaching and foundation classes for 9th-12th (State Board, CBSE, ICSE) and entrance exams.",
+  "icons": [
+    {
+      "src": "/images/logo.webp",
+      "type": "image/webp",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#130c0a",
+  "theme_color": "#b91c1c",
+  "display": "standalone",
+  "orientation": "portrait"
+}
