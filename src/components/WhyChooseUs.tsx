@@ -112,7 +112,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </h2>
           <p className="mt-3 font-display text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            The Suyog Classes Advantage
+            Our Core Advantages
           </p>
           <div className="mt-4 w-20 h-1.5 bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold mx-auto rounded-full"></div>
           <p className="mt-4 text-slate-600 font-sans text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
