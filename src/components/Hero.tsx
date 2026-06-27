@@ -8,22 +8,22 @@ const homeSchema = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://suyogcoachingclasses.in/#website",
-      "url": "https://suyogcoachingclasses.in/",
+      "@id": "https://www.suyogcoachingclasses.in/#website",
+      "url": "https://www.suyogcoachingclasses.in/",
       "name": "Suyog Coaching Classes",
       "description": "Premium educational coaching institute in Chhatrapati Sambhajinagar",
       "publisher": {
-        "@id": "https://suyogcoachingclasses.in/#organization"
+        "@id": "https://www.suyogcoachingclasses.in/#organization"
       }
     },
     {
       "@type": "EducationalOrganization",
-      "@id": "https://suyogcoachingclasses.in/#organization",
+      "@id": "https://www.suyogcoachingclasses.in/#organization",
       "name": "Prof. Maske Patil Sir's Suyog Classes",
       "alternateName": "Suyog Classes Chhatrapati Sambhajinagar",
       "description": "Premier educational coaching institute in Chhatrapati Sambhajinagar offering quality, affordable tuition for school boards (State Board, CBSE, ICSE) and advanced competitive engineering/medical foundations (IIT-JEE, NEET, MHT-CET).",
-      "logo": "https://suyogcoachingclasses.in/images/logo.webp",
-      "url": "https://suyogcoachingclasses.in/",
+      "logo": "https://www.suyogcoachingclasses.in/images/logo.webp",
+      "url": "https://www.suyogcoachingclasses.in/",
       "telephone": "+918626092350",
       "sameAs": [
         "https://youtube.com/@suyogclasses?si=Lg38VnV64L1Arbpn",
@@ -54,9 +54,9 @@ const homeSchema = {
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://suyogcoachingclasses.in/#localbusiness",
+      "@id": "https://www.suyogcoachingclasses.in/#localbusiness",
       "name": "Suyog Coaching Classes",
-      "image": "https://suyogcoachingclasses.in/images/logo.webp",
+      "image": "https://www.suyogcoachingclasses.in/images/logo.webp",
       "telephone": "+918626092350",
       "priceRange": "$$",
       "address": {
@@ -72,7 +72,7 @@ const homeSchema = {
         "latitude": "19.861783",
         "longitude": "75.352494"
       },
-      "url": "https://suyogcoachingclasses.in/",
+      "url": "https://www.suyogcoachingclasses.in/",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",

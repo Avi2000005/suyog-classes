@@ -7,37 +7,37 @@ const contactSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://suyogcoachingclasses.in/contact#webpage",
-      "url": "https://suyogcoachingclasses.in/contact",
+      "@id": "https://www.suyogcoachingclasses.in/contact#webpage",
+      "url": "https://www.suyogcoachingclasses.in/contact",
       "name": "Contact Suyog Coaching Classes | Chhatrapati Sambhajinagar",
       "description": "Get in touch with Prof. Maske Patil Sir's Suyog Classes in Pundlik Nagar, Chhatrapati Sambhajinagar. Enquire about admissions, batch sizes, fees, and location.",
       "isPartOf": {
-        "@id": "https://suyogcoachingclasses.in/#website"
+        "@id": "https://www.suyogcoachingclasses.in/#website"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://suyogcoachingclasses.in/contact#breadcrumb",
+      "@id": "https://www.suyogcoachingclasses.in/contact#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://suyogcoachingclasses.in/"
+          "item": "https://www.suyogcoachingclasses.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Contact Us",
-          "item": "https://suyogcoachingclasses.in/contact"
+          "item": "https://www.suyogcoachingclasses.in/contact"
         }
       ]
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://suyogcoachingclasses.in/#localbusiness",
+      "@id": "https://www.suyogcoachingclasses.in/#localbusiness",
       "name": "Suyog Coaching Classes",
-      "image": "https://suyogcoachingclasses.in/images/logo.webp",
+      "image": "https://www.suyogcoachingclasses.in/images/logo.webp",
       "telephone": "+918626092350",
       "priceRange": "$$",
       "address": {
@@ -53,7 +53,7 @@ const contactSchema = {
         "latitude": "19.861783",
         "longitude": "75.352494"
       },
-      "url": "https://suyogcoachingclasses.in/",
+      "url": "https://www.suyogcoachingclasses.in/",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",

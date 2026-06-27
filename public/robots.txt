@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://suyogcoachingclasses.in/sitemap.xml
+Sitemap: https://www.suyogcoachingclasses.in/sitemap.xml

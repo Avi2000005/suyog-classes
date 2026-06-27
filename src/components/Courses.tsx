@@ -9,29 +9,29 @@ const coursesSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://suyogcoachingclasses.in/courses#webpage",
-      "url": "https://suyogcoachingclasses.in/courses",
+      "@id": "https://www.suyogcoachingclasses.in/courses#webpage",
+      "url": "https://www.suyogcoachingclasses.in/courses",
       "name": "9th-12th Board & Entrance Coaching Programs | Suyog Classes",
       "description": "Explore our specialized coaching programs for 9th, 10th (SSC, CBSE, ICSE) and 11th, 12th Science boards and competitive MHT-CET/IIT-JEE/NEET foundation classes.",
       "isPartOf": {
-        "@id": "https://suyogcoachingclasses.in/#website"
+        "@id": "https://www.suyogcoachingclasses.in/#website"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://suyogcoachingclasses.in/courses#breadcrumb",
+      "@id": "https://www.suyogcoachingclasses.in/courses#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://suyogcoachingclasses.in/"
+          "item": "https://www.suyogcoachingclasses.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses Offered",
-          "item": "https://suyogcoachingclasses.in/courses"
+          "item": "https://www.suyogcoachingclasses.in/courses"
         }
       ]
     }

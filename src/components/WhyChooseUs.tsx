@@ -17,12 +17,12 @@ const whyChooseUsSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://suyogcoachingclasses.in/why-choose-us#webpage",
-      "url": "https://suyogcoachingclasses.in/why-choose-us",
+      "@id": "https://www.suyogcoachingclasses.in/why-choose-us#webpage",
+      "url": "https://www.suyogcoachingclasses.in/why-choose-us",
       "name": "Why Choose Suyog Classes | Small Batches & Personal Attention",
       "description": "Discover the advantages of studying at Suyog Classes. Small batch sizes, expert mentoring by Patil Sir, weekly assessments, and affordable tuition in Aurangabad/Chhatrapati Sambhajinagar.",
       "isPartOf": {
-        "@id": "https://suyogcoachingclasses.in/#website"
+        "@id": "https://www.suyogcoachingclasses.in/#website"
       }
     },
     {
@@ -33,19 +33,19 @@ const whyChooseUsSchema = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://suyogcoachingclasses.in/"
+          "item": "https://www.suyogcoachingclasses.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Why Choose Us",
-          "item": "https://suyogcoachingclasses.in/why-choose-us"
+          "item": "https://www.suyogcoachingclasses.in/why-choose-us"
         }
       ]
     },
     {
       "@type": "FAQPage",
-      "@id": "https://suyogcoachingclasses.in/why-choose-us#faq",
+      "@id": "https://www.suyogcoachingclasses.in/why-choose-us#faq",
       "mainEntity": faqSchemaItems
     }
   ]
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
         title="Why Choose Suyog Classes | Small Batches & Personal Attention"
         description="Discover the advantages of studying at Suyog Classes in Chhatrapati Sambhajinagar. Small batch sizes, expert mentoring by Patil Sir, weekly tests, and affordable fees."
         keywords="best coaching near me, coaching classes with weekly tests, personal attention tuition, affordable coaching classes, Aurangabad"
-        canonical="https://suyogcoachingclasses.in/why-choose-us"
+        canonical="https://www.suyogcoachingclasses.in/why-choose-us"
         schema={whyChooseUsSchema}
       />
       <section id="why-choose-us" className="py-16 sm:py-24 bg-white relative scroll-mt-6">

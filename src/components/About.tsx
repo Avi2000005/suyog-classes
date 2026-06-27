@@ -6,29 +6,29 @@ const aboutSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://suyogcoachingclasses.in/about#webpage",
-      "url": "https://suyogcoachingclasses.in/about",
+      "@id": "https://www.suyogcoachingclasses.in/about#webpage",
+      "url": "https://www.suyogcoachingclasses.in/about",
       "name": "About Prof. Maske Patil Sir & Suyog Classes",
       "description": "Learn about the legacy of trust, affordable fees, and result-oriented coaching at Suyog Classes, led by Prof. Maske Patil Sir in Chhatrapati Sambhajinagar.",
       "isPartOf": {
-        "@id": "https://suyogcoachingclasses.in/#website"
+        "@id": "https://www.suyogcoachingclasses.in/#website"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://suyogcoachingclasses.in/about#breadcrumb",
+      "@id": "https://www.suyogcoachingclasses.in/about#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://suyogcoachingclasses.in/"
+          "item": "https://www.suyogcoachingclasses.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "About Us",
-          "item": "https://suyogcoachingclasses.in/about"
+          "item": "https://www.suyogcoachingclasses.in/about"
         }
       ]
     }
@@ -42,7 +42,7 @@ export default function About() {
         title="About Prof. Maske Patil Sir & Suyog Classes Chhatrapati Sambhajinagar"
         description="Learn about the legacy of trust and value-driven education at Suyog Classes, founded by Prof. Maske Patil Sir. We deliver high-quality, affordable coaching for school boards and entrance exams."
         keywords="Prof. Maske Patil Sir, Suyog Classes founder, coaching history, academic excellence, affordable tuition, Chhatrapati Sambhajinagar"
-        canonical="https://suyogcoachingclasses.in/about"
+        canonical="https://www.suyogcoachingclasses.in/about"
         schema={aboutSchema}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
