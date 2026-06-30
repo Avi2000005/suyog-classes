@@ -37,7 +37,7 @@ const contactSchema = {
       "@type": "LocalBusiness",
       "@id": "https://www.suyogcoachingclasses.in/#localbusiness",
       "name": "Suyog Coaching Classes",
-      "image": "https://www.suyogcoachingclasses.in/images/logo.webp",
+      "image": "https://www.suyogcoachingclasses.in/images/logo.jpg",
       "telephone": "+918626092350",
       "priceRange": "$$",
       "address": {

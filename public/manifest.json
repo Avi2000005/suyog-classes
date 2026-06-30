@@ -4,10 +4,16 @@
   "description": "Suyog Classes in Chhatrapati Sambhajinagar provides premier coaching and foundation classes for 9th-12th (State Board, CBSE, ICSE) and entrance exams.",
   "icons": [
     {
-      "src": "/images/logo.webp",
-      "type": "image/webp",
+      "src": "/images/logo.png",
+      "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
     }
   ],
   "start_url": "/",

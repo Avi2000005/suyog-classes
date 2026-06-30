@@ -22,7 +22,7 @@ const homeSchema = {
       "name": "Prof. Maske Patil Sir's Suyog Classes",
       "alternateName": "Suyog Classes Chhatrapati Sambhajinagar",
       "description": "Premier educational coaching institute in Chhatrapati Sambhajinagar offering quality, affordable tuition for school boards (State Board, CBSE, ICSE) and advanced competitive engineering/medical foundations (IIT-JEE, NEET, MHT-CET).",
-      "logo": "https://www.suyogcoachingclasses.in/images/logo.webp",
+      "logo": "https://www.suyogcoachingclasses.in/images/logo.png",
       "url": "https://www.suyogcoachingclasses.in/",
       "telephone": "+918626092350",
       "sameAs": [
@@ -56,7 +56,7 @@ const homeSchema = {
       "@type": "LocalBusiness",
       "@id": "https://www.suyogcoachingclasses.in/#localbusiness",
       "name": "Suyog Coaching Classes",
-      "image": "https://www.suyogcoachingclasses.in/images/logo.webp",
+      "image": "https://www.suyogcoachingclasses.in/images/logo.jpg",
       "telephone": "+918626092350",
       "priceRange": "$$",
       "address": {
